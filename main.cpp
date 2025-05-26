@@ -42,7 +42,9 @@ static constexpr zend_function_entry functions[] = {
     },
     {}
 };
-
+#ifndef ZEND_DEBUG
+#define ZEND_DEBUG 0
+#endif
 zend_module_entry module_entry = {
     .size = sizeof(zend_module_entry),
     .zend_api = ZEND_MODULE_API_NO,
